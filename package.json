@@ -6,7 +6,8 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "./node_modules/gh-pages/bin/gh-pages-clean.js && gh-pages -d build"
   },
   "license": "MIT",
   "devDependencies": {
