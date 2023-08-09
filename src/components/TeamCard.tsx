@@ -27,7 +27,7 @@ const teamInfo: any = {
     light: bennett,
     dark: darkBennett,
     githubLink: 'https://github.com/bmgitcode',
-    linkedinLink: 'https://www.linkedin.com/in/bennett-ma-a9701425b/',
+    linkedinLink: 'https://www.linkedin.com/in/bennett-ma/',
   },
   Caitlin: {
     light: caitlin,
@@ -63,30 +63,32 @@ const TeamCard: Component<TeamCardProps> = ({ name }: TeamCardProps) => {
   const [hovered, setHovered] = createSignal(false);
 
   return (
-    <div
-      class='border border-purple-900 rounded-lg outline-white w-1/6 flex flex-wrap justify-center'
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <div class='h-40 w-32'>
-        {hovered() && hover ? (
-          <img class='h-40 w-32' src={hover} />
-        ) : (
-          <img class='h-40 w-32' src={darkMode() ? dark : light} />
-        )}
-      </div>
-      <p class='text-2xl font-extrabold w-full text-center'>{name}</p>
-      <div class='flex w-full justify-evenly items-center'>
-        <a
-          class='object-contain h-[20px] w-[20px]'
-          target='_blank'
-          href={githubLink}
-        >
-          <img src={darkMode() ? githubDark : githubLight} />
-        </a>
-        <a target='_blank' href={linkedinLink}>
-          <img src={darkMode() ? linkedinDark : linkedinLight} />
-        </a>
+    <div class='lg:w-1/6 sm:w-1/2 mx-auto my-5'>
+      <div
+        class='border border-purple-900 rounded-lg outline-white pt-7 pb-2 flex flex-wrap justify-center'
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <div class='h-40 w-32'>
+          {hovered() && hover ? (
+            <img class='h-40 w-32' src={hover} />
+          ) : (
+            <img class='h-40 w-32' src={darkMode() ? dark : light} />
+          )}
+        </div>
+        <p class='text-2xl font-extrabold w-full text-center'>{name}</p>
+        <div class='flex w-full justify-evenly items-center py-3'>
+          <a
+            class='object-contain h-[20px] w-[20px]'
+            target='_blank'
+            href={githubLink}
+          >
+            <img src={darkMode() ? githubDark : githubLight} />
+          </a>
+          <a target='_blank' href={linkedinLink}>
+            <img src={darkMode() ? linkedinDark : linkedinLight} />
+          </a>
+        </div>
       </div>
     </div>
   );

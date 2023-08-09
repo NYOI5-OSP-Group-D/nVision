@@ -11,7 +11,7 @@ const App: Component = () => {
   const { darkMode } = setMode;
 
   return (
-    <div class={darkMode() ? 'dark px-20 pb-20' : 'px-20 pb-20'}>
+    <div class={darkMode() ? 'dark sm:px-20 pb-20' : 'sm:px-20 pb-20'}>
       <Navbar />
       <Hero />
       <div id='Features' class='pb-[8vh]' />

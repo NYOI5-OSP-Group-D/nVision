@@ -10,10 +10,10 @@ import debugDark from '../assets/dark/debug.svg';
 const Features: Component = () => {
   return (
     <div class='min-h-[93vh] text-center pt-[8vh]'>
-      <div class='bg-base/[.5] rounded-xl px-10 py-12 dark:bg-dark/[.5]'>
+      <div class='bg-base/[.5] sm:rounded-xl px-10 py-12 dark:bg-dark/[.5]'>
         <h1 class='mb-5 text-5xl font-bold'>Features</h1>
         <p class='max-w-sm m-auto'>Enhance your development experience</p>
-        <a class='max-w-sm m-auto italic underline' href='#medium'>
+        <a class='max-w-sm m-auto italic underline' target='_blank' href='https://medium.com/@nvisiondevtools/nvision-server-side-network-observability-for-next-js-472450e19343'>
           Click Here to Learn More
         </a>
         <div class='flex flex-wrap justify-evenly my-10'>

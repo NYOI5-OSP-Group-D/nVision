@@ -6,10 +6,13 @@ import lightSun from '../assets/light/light.svg';
 import darkSun from '../assets/dark/light.svg';
 import setMode from '../setMode';
 
+import npmLight from '../assets/light/npm.svg';
+import npmDark from '../assets/dark/npm.svg';
 import linkedinLight from '../assets/light/linkedin.svg';
 import linkedinDark from '../assets/dark/linkedin.svg';
 import githubDark from '../assets/dark/github.svg';
 import githubLight from '../assets/light/github.svg';
+import NavLinks from '../components/NavLinks';
 
 const Navbar: Component = () => {
   const { darkMode, toggleDarkMode } = setMode;
@@ -32,20 +35,16 @@ const Navbar: Component = () => {
         <a class='mr-4' href='#nvision'>
           <img src={logo} class='w-10 h-10' alt='logo' />
         </a>
-        <a class='mr-4' href='#Features'>
-          Features
-        </a>
-        <a class='mr-4' href='#Demo'>
-          Demo
-        </a>
-        <a class='mr-4' href='#Get-Started'>
-          Get Started
-        </a>
-        <a class='mr-4' href='#Team'>
-          Team
-        </a>
+        <NavLinks />
       </div>
       <div id='nav-icons' class='flex items-center'>
+        <a
+          class='object-contain h-[40px] w-[40px] mr-4'
+          target='_blank'
+          href='https://www.npmjs.com/package/nvisionjs'
+        >
+          <img src={darkMode() ? npmDark : npmLight}/>
+        </a>
         <a
           class='object-contain h-[20px] w-[20px] mr-4'
           target='_blank'
@@ -53,7 +52,11 @@ const Navbar: Component = () => {
         >
           <img src={darkMode() ? githubDark : githubLight} />
         </a>
-        <a class='mr-8' target='_blank' href='https://www.linkedin.com/company/nvisionjs/'>
+        <a
+          class='mr-8'
+          target='_blank'
+          href='https://www.linkedin.com/company/nvisionjs/'
+        >
           <img src={darkMode() ? linkedinDark : linkedinLight} />
         </a>
         <img

@@ -14,10 +14,10 @@ const Demo: Component = () => {
   ];
   return (
     <div class='pt-[8vh]'>
-      <div class='bg-base/[.5] rounded-xl px-10 py-12 dark:bg-dark/[.5]'>
+      <div class='bg-base/[.5] sm:rounded-xl px-10 py-12 dark:bg-dark/[.5]'>
         <h2 class='text-center text-5xl p-10 font-bold'> Demo </h2>
         <div class='flex flex-col items-center '>
-          <div class='flex w-1/4 justify-evenly'>
+          <div class='flex justify-evenly w-full'>
             <button
               class={darkMode() ? `btn btn-outline text-white hover:bg-[#49494d] ${index()===1 ? '' : 'bg-[#49494d]'}` : `btn btn-outline text-white hover:bg-base ${index()===1 ? '' : 'bg-base'}` }
               onclick={() => {

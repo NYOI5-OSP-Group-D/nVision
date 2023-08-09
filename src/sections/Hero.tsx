@@ -7,9 +7,9 @@ const Hero: Component = () => {
       id='nvision'
       class='min-h-[93vh] flex justify-center items-center mt-[8vh]'
     >
-      <div class='bg-base/[.5] rounded-xl px-10 py-16 dark:bg-dark/[.5]'>
+      <div class='bg-base/[.5] sm:rounded-xl px-10 py-16 dark:bg-dark/[.5]'>
         <div class='hero-content flex-col lg:flex-row'>
-          <img src={logo} class='w-1/3' />
+          <img src={logo} class='lg:w-1/3 md:w-1/2 w-full' />
           <div>
             <h1 class='text-6xl font-extrabold'>nVision</h1>
             <p class='mb-5 mt-2 italic text-xl font-bold'>A developer tool for Next.js</p>
